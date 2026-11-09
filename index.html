@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pazarlama Müdürüm Cebimde</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--panel:#fffdf8;--ink:#1b2236;--mute:#6b6f7e;--line:#e2dac8;--gold:#b8862b;--gold2:#8a5f12;--navy:#1b2236;--sh:0 8px 30px rgba(27,34,54,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d111c;--panel:#151b2b;--ink:#efe9da;--mute:#9aa0b2;--line:#262e45;--gold:#d9a94a;--gold2:#f0c56e;--navy:#0a0d16;--sh:0 8px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0d111c;--panel:#151b2b;--ink:#efe9da;--mute:#9aa0b2;--line:#262e45;--gold:#d9a94a;--gold2:#f0c56e;--navy:#0a0d16;--sh:0 8px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box}html,body{height:100%;margin:0;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3,.sf{font-family:Fraunces,Georgia,"Times New Roman",serif}
+header{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line)}
+.logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);display:grid;place-items:center;color:#fff;font:700 21px Fraunces,Georgia,serif}
+.brand b{font:700 18px Fraunces,Georgia,serif;letter-spacing:.01em;display:block;line-height:1.1}.brand span{font-size:11px;color:var(--mute)}
+.sp{flex:1}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:8px 13px;font:500 13px Inter,sans-serif;cursor:pointer}
+.btn:hover{border-color:var(--gold)}.btn:disabled{opacity:.5}
+.pri{border:0;background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);color:#fff;font-weight:600;box-shadow:0 6px 18px rgba(224,69,123,.35);transition:transform .15s}.pri:hover{transform:translateY(-2px) scale(1.02)}.big{font-size:16px;padding:14px 22px;border-radius:14px;animation:pl 2.4s infinite}@keyframes pl{50%{box-shadow:0 6px 28px rgba(108,76,255,.6)}}
+nav{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-bottom:1px solid var(--line)}
+nav button{white-space:nowrap;border:0;background:transparent;color:var(--mute);font:500 14px Inter,sans-serif;padding:8px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--navy);color:#fffdf8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav button.on{background:var(--gold);color:#10131d}}
+main{flex:1;overflow-y:auto;padding:16px}
+.w{max-width:860px;margin:0 auto}
+h1{font-size:clamp(24px,5vw,34px);margin:4px 0 6px;line-height:1.15}h1 em{font-style:normal;color:var(--gold)}
+.mu{color:var(--mute);margin:0 0 14px}
+.f{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-bottom:12px}
+label{font-size:12px;font-weight:600;color:var(--mute);letter-spacing:.04em}
+input,textarea,select{width:100%;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:12px;padding:11px 12px;font:16px Inter,sans-serif;outline:none;margin-top:4px}
+input:focus,textarea:focus{border-color:var(--gold)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.empty{text-align:center;padding:36px 12px;border:1px dashed var(--line);border-radius:16px;color:var(--mute)}
+.dots span{display:inline-block;width:8px;height:8px;margin:0 3px;border-radius:50%;background:var(--gold);animation:b 1.2s infinite}.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
+@keyframes b{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.slide{aspect-ratio:16/9;min-height:300px;background:linear-gradient(145deg,#141a2d,#1f2a47);color:#f3ecda;border-radius:18px;padding:clamp(18px,4vw,44px);box-shadow:var(--sh);position:relative;display:flex;flex-direction:column;justify-content:center;border-top:4px solid #d9a94a;overflow:hidden}
+.slide h2{font-size:clamp(20px,3.6vw,40px);margin:0 0 6px;line-height:1.15}
+.slide .sub{color:#d9a94a;margin:0 0 12px;font-size:clamp(13px,1.8vw,20px)}
+.slide ul{margin:0;padding-left:20px;font-size:clamp(13px,1.9vw,21px)}.slide li{margin:5px 0}
+.slide .sn{position:absolute;right:16px;top:12px;font-size:12px;color:#9aa0b2}
+.kp{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.kp div{background:rgba(217,169,74,.14);border:1px solid rgba(217,169,74,.4);border-radius:12px;padding:8px 14px}
+.kp b{display:block;font:700 clamp(16px,2.6vw,28px) Fraunces,Georgia,serif;color:#f0c56e}.kp small{font-size:12px;color:#c9c3b3}
+.slide.ts h2{font-size:clamp(24px,5vw,52px)}
+.nv{display:flex;align-items:center;gap:8px;margin:12px 0}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;color:var(--mute)}
+.note b{color:var(--gold)}
+.ph{font:700 18px Fraunces,Georgia,serif;margin:20px 0 8px;color:var(--gold)}
+.t{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:6px 0}
+.t input{width:20px;height:20px;margin:2px 0 0;accent-color:#b8862b}
+.t.d .tt{text-decoration:line-through;opacity:.5}
+.tt{font-weight:500}.tm{font-size:12px;color:var(--mute);margin-top:2px}
+.bd{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:99px;border:1px solid var(--gold);color:var(--gold);margin-right:4px}
+.pg{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0 10px}.pg i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.cd{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0;box-shadow:var(--sh);white-space:pre-wrap}
+.cd small{color:var(--gold);font-weight:600;letter-spacing:.08em;font-size:11px;display:block;margin-bottom:3px}
+.cp{float:right;border:0;background:transparent;color:var(--mute);cursor:pointer;font:500 12px Inter,sans-serif}.cp:hover{color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips .cd{margin:0;padding:8px 12px}
+.ch{margin:10px 0;display:flex}.ch.u{justify-content:flex-end}.ch div{max-width:94%;padding:10px 14px;border-radius:14px;background:var(--panel);border:1px solid var(--line);white-space:pre-wrap}.ch.u div{background:var(--navy);color:#fffdf8;border:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ch.u div{background:var(--gold);color:#10131d}}
+.err{color:#b3362b;font-size:14px;margin:8px 0}
+.hero{background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);color:#fff;border-radius:22px;padding:24px 22px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:var(--sh)}.hero::after{content:"🧭";position:absolute;right:14px;bottom:-18px;font-size:96px;opacity:.18;transform:rotate(-12deg)}.hero h1{color:#fff;margin:10px 0 6px}.hero h1 em{color:#ffe9a8}.hero p{margin:0;opacity:.92;max-width:520px}.pill{background:rgba(255,255,255,.22);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:600}
+.qs{margin:12px 0 6px;font-size:12px;font-weight:600;color:var(--mute);letter-spacing:.04em}.qr{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px}.qc{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:99px;padding:8px 14px;font:500 13px Inter,sans-serif;cursor:pointer;transition:all .15s}.qc:hover{border-color:#e0457b;transform:translateY(-1px)}.qc.on{background:linear-gradient(135deg,#6c4cff,#e0457b);color:#fff;border-color:transparent}
+.ld small{color:var(--mute)}.msgs{position:relative;height:28px;margin:12px 0 4px}.msgs p{position:absolute;inset:0;margin:0;opacity:0;font-weight:600;animation:ms 12s infinite}.msgs p:nth-child(2){animation-delay:3s}.msgs p:nth-child(3){animation-delay:6s}.msgs p:nth-child(4){animation-delay:9s}@keyframes ms{0%{opacity:0;transform:translateY(8px)}4%,22%{opacity:1;transform:none}26%,100%{opacity:0}}
+.slide::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(224,69,123,.45),transparent 70%);pointer-events:none}.t,.cd{transition:transform .15s,border-color .15s}.t:hover,.cd:hover{transform:translateY(-1px);border-color:var(--gold)}
+.cf{position:fixed;top:-30px;font-size:26px;z-index:50;pointer-events:none;animation:fl 2.6s ease-in forwards}@keyframes fl{to{transform:translateY(105vh) rotate(540deg);opacity:.2}}
+header{background:linear-gradient(90deg,transparent,rgba(108,76,255,.07))}
+.hero{background-size:220% 220%;animation:gs 9s ease infinite}@keyframes gs{50%{background-position:100% 50%}}.hero h1{font-size:clamp(28px,7vw,46px);line-height:1.08}
+.slide{aspect-ratio:auto;min-height:clamp(300px,54vw,540px);animation:si .5s cubic-bezier(.2,.8,.2,1);background-image:linear-gradient(145deg,#101528,#1c2748)}.slide.c1{background-image:linear-gradient(145deg,#1a1033,#3a1c5e)}.slide.c2{background-image:linear-gradient(145deg,#0f2233,#0f4a5c)}.slide.c3{background-image:linear-gradient(145deg,#2a1020,#5c1c3a)}.slide.c4{background-image:linear-gradient(145deg,#1f1a0d,#4a3a12)}@keyframes si{from{opacity:0;transform:translateX(26px) scale(.98)}}
+.slide .ic{font-size:clamp(30px,6vw,60px);line-height:1;margin-bottom:8px}.slide h2{font-size:clamp(24px,4.8vw,50px);letter-spacing:-.01em}.slide ul{list-style:none;padding:0;display:grid;gap:8px;max-width:760px}.slide li{background:rgba(255,255,255,.08);border-left:4px solid #ff8a3d;border-radius:10px;padding:9px 14px;margin:0;font-weight:500}.kp b{font-size:clamp(24px,4.4vw,44px)}
+.dt{display:flex;gap:6px;flex:1;justify-content:center;align-items:center}.dt i{width:8px;height:8px;border-radius:99px;background:var(--line);transition:all .25s}.dt i.on{width:28px;background:linear-gradient(90deg,#6c4cff,#e0457b)}
+.t.pYüksek{border-left:4px solid #e0457b}.t.pOrta{border-left:4px solid #ff8a3d}.t.pDüşük{border-left:4px solid #6c4cff}.cd{border-left:4px solid #e0457b}.cd b{font-size:17px}
+.bk{background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);color:#fff;border-radius:20px;padding:20px;margin:8px 0 14px;box-shadow:var(--sh)}.bk small{opacity:.85;font-weight:600;letter-spacing:.08em}.bq{font:700 clamp(18px,4vw,26px) Fraunces,Georgia,serif;margin:6px 0}.tg{font-size:clamp(22px,5.5vw,34px);font-weight:700;color:#ffe9a8;margin-bottom:8px}.bk .bd{color:#fff;border-color:#fff}.bk .cp{color:#fff}.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.sc{border-radius:14px;padding:30px 12px 10px;min-height:110px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--sh)}.sc small{font-size:11px;opacity:.85}.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}.two ul,.cd ul{margin:4px 0;padding-left:18px}.bi{border:2px solid #e0457b}
+.au{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}.au i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.22;animation:dr 18s ease-in-out infinite alternate}.au i:nth-child(1){background:#6c4cff;left:-12vmax;top:-10vmax}.au i:nth-child(2){background:#e0457b;right:-14vmax;top:20vh;animation-delay:-6s}.au i:nth-child(3){background:#ff8a3d;left:20vw;bottom:-22vmax;animation-delay:-12s}@keyframes dr{to{transform:translate(8vmax,-6vmax) scale(1.15)}}
+.brand b{background:linear-gradient(90deg,#6c4cff,#e0457b,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}.logo{animation:lg 4s ease-in-out infinite}@keyframes lg{50%{transform:rotate(-6deg) scale(1.07)}}
+.cd,.t,.note,.card{backdrop-filter:blur(10px);background:color-mix(in srgb,var(--panel) 84%,transparent)}
+nav button.on{background:linear-gradient(135deg,#6c4cff,#e0457b)!important;color:#fff!important;box-shadow:0 4px 14px rgba(224,69,123,.35)}nav button{font-size:15px}
+.fl{position:absolute;font-size:30px;animation:fy 5s ease-in-out infinite;z-index:1}.f1{right:22%;top:14px}.f2{right:9%;top:54px;animation-delay:-1.6s}.f3{right:32%;bottom:12px;animation-delay:-3.2s}@keyframes fy{50%{transform:translateY(-12px) rotate(10deg)}}
+.hs{display:flex;gap:22px;margin-top:16px;flex-wrap:wrap}.hs div{font-size:12px;opacity:.92}.hs b{display:block;font:700 24px Fraunces,Georgia,serif}
+.pri{position:relative;overflow:hidden}.pri::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sh 3.2s infinite}@keyframes sh{to{left:140%}}
+.slide::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}.slide>*{position:relative}
+.cd,.sc{animation:up .5s both}.cd:nth-child(2),.sc:nth-child(2){animation-delay:.06s}.cd:nth-child(3),.sc:nth-child(3){animation-delay:.12s}.cd:nth-child(4),.sc:nth-child(4){animation-delay:.18s}.cd:nth-child(5),.sc:nth-child(5){animation-delay:.24s}@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.kp div{backdrop-filter:blur(6px)}
+.slide.fsx{position:fixed;inset:0;z-index:60;border-radius:0;min-height:0;aspect-ratio:auto;animation:none;padding:max(28px,env(safe-area-inset-top)) 7vw max(80px,env(safe-area-inset-bottom))}.slide.fsx li{font-size:clamp(16px,2.6vw,32px)}.slide.fsx h2{font-size:clamp(28px,5.6vw,64px)}
+.fsc{position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));display:flex;gap:10px;z-index:70}.fsc button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(20,26,45,.75);color:#fff;font-size:20px;cursor:pointer}
+.tbl{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}.tbl th,.tbl td{border:1px solid var(--line);padding:8px 10px;text-align:center}.tbl td:first-child,.tbl th:first-child{text-align:left}.tw{overflow-x:auto;margin:8px 0}.cd ol{margin:4px 0;padding-left:20px}
+.lc img{width:100%;aspect-ratio:1;background:#fff;border-radius:12px;display:block;margin-bottom:8px;object-fit:contain}.card[disabled]{opacity:.5}
+.qd{border-left:none;border-top:4px solid #6c4cff}
+.fb{margin:22px 0 6px;padding:14px;border-radius:18px;border:1px dashed #e0457b;background:color-mix(in srgb,var(--panel) 80%,transparent)}.fb>b{display:block;font:700 16px Fraunces,Georgia,serif}.fb .mu{display:block;font-size:13px;margin:2px 0 8px}.fb textarea{margin:0}.fbr{background:var(--bg);border-left:4px solid #2bb7a3;border-radius:10px;padding:10px 12px;font-size:14px;margin-top:8px}.fbr small{display:block;color:#2bb7a3;font-weight:700;letter-spacing:.06em}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.thumbs div{position:relative}.thumbs img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:12px;border:1px solid var(--line)}.x{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:#e0457b;color:#fff;cursor:pointer}.docs{margin:6px 0}.docs a{cursor:pointer;margin-left:4px}.up{cursor:pointer;letter-spacing:0}.af textarea{margin-bottom:0}.blg{height:40px;margin-bottom:8px;display:block;background:#fff;border-radius:8px;padding:4px}.slg{height:clamp(40px,9vw,90px);align-self:flex-start;background:#fff;border-radius:12px;padding:6px;margin-bottom:10px}.on2{border-color:#2bb7a3;color:#2bb7a3}.scr{margin-top:8px;padding:8px 10px;background:var(--bg);border-radius:10px;font-size:14px}.scr div{margin:3px 0}.sb{float:none;display:block;margin-top:8px}
+.lc img{max-width:190px;margin:0 auto 8px}.tbl{min-width:0;font-size:13px}.tbl th,.tbl td{padding:7px 4px}.tbl td:first-child,.tbl th:first-child{padding-left:8px;min-width:78px}.sc{min-height:84px;padding-top:20px}.slide{border-top:0;box-shadow:var(--sh),inset 0 4px 0 #d9a94a}
+.t{font-size:15px;font-weight:500;letter-spacing:0;color:var(--ink)}header .btn{white-space:nowrap;padding:8px 12px}.brand{min-width:0}.brand span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hero .pill:not(.keep){display:none}
+#nav{display:none}.crumb{display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);margin:0 0 10px;text-transform:uppercase}.crumb span{color:#e0457b}
+.nxt{margin:28px 0 14px;display:flex;justify-content:center}.nxt .btn{padding:14px 24px;border-radius:14px;font-size:15px;font-weight:600;border-color:#e0457b;color:#e0457b}
+.bd2{position:fixed;inset:0;background:rgba(10,13,22,.55);z-index:80;backdrop-filter:blur(3px)}.sh{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 8px);transform:translateX(-50%);width:min(560px,calc(100% - 20px));max-height:calc(100% - 24px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:14px;z-index:90;box-shadow:0 20px 60px rgba(0,0,0,.35)}.shh{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.shh b{font:700 18px Fraunces,Georgia,serif}
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.st2{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:16px;padding:12px;cursor:pointer;font:inherit;min-height:104px;transition:transform .15s,border-color .15s}.st2:hover{transform:translateY(-2px);border-color:#e0457b}.st2.on{border-color:#e0457b;box-shadow:0 0 0 2px rgba(224,69,123,.25)}.st2 i{font-style:normal;font-size:26px;line-height:1.1}.st2 b{font-size:15px}.st2 span{font-size:12px;color:var(--mute);line-height:1.3}.st2 u{position:absolute;right:10px;top:8px;text-decoration:none;color:#2bb7a3;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}.grid.w{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.card{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:18px;padding:16px;cursor:pointer;font:inherit;box-shadow:var(--sh);transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-3px);border-color:#e0457b}.ci{font-style:normal;font-size:32px;line-height:1.1}.card b{font-size:16px;font-family:Fraunces,Georgia,serif}.card span{font-size:13px;color:var(--mute);line-height:1.35}.st{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.05em;color:#e0457b;margin-top:auto;padding-top:8px}.card.ok{border-color:#2bb7a3}.card.ok .st{color:#2bb7a3}
+#nav{display:flex;overflow:hidden;gap:2px;padding:4px 6px 6px;border-bottom:0;border-top:1px solid var(--line);background:var(--bg)}#nav button{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 0 5px;font-size:10.5px;font-weight:600;border-radius:12px;position:relative}#nav button i{font-style:normal;font-size:20px;line-height:1.1}#nav button u{position:absolute;top:3px;right:18%;width:8px;height:8px;border-radius:50%;background:#2bb7a3;border:2px solid var(--bg)}.qd.c1{border-top-color:#e0457b}.qd.c2{border-top-color:#ff8a3d}.qd.c3{border-top-color:#2bb7a3}.ph{display:flex;align-items:center;gap:8px}.ph::before{content:"";width:6px;height:20px;border-radius:4px;background:linear-gradient(180deg,#6c4cff,#e0457b)}
+</style>
+</head>
+<body>
+<div class="au"><i></i><i></i><i></i></div><header><div class="logo">M</div><div class="brand"><b>Pazarlama Müdürüm</b><span>AI ile marka, sunum ve plan</span></div><div class="sp"></div><button class="btn" id="ex" title="Hepsini indir">⬇</button><button class="btn pri" id="mn">☰ Menü</button></header>
+
+<main id="main"><div class="w" id="v"></div></main><div id="sheet"></div>
+
+<style>
+#gate{position:fixed;inset:0;z-index:300;background:linear-gradient(135deg,#1b1340,#4b1d5e 55%,#a13b5b);display:none;align-items:center;justify-content:center;padding:16px;overflow:auto;font-family:Inter,system-ui,sans-serif}
+#gate .gc{background:#fffdf8;color:#1b2236;border-radius:24px;padding:22px;max-width:420px;width:100%;box-shadow:0 24px 70px rgba(0,0,0,.45)}
+#gate .gl{width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);display:grid;place-items:center;color:#fff;font:700 28px Georgia,serif;margin-bottom:10px}
+#gate h2{font:700 24px Georgia,serif;margin:0 0 4px}#gate p{margin:0 0 12px;color:#6b6f7e;font-size:14px}
+#gate .gt{display:flex;gap:6px;margin:12px 0}#gate .gt button{flex:1;padding:10px;border-radius:12px;border:1px solid #e2dac8;background:#fff;font:600 14px Inter,sans-serif;cursor:pointer}#gate .gt button.on{background:#1b2236;color:#fff;border-color:#1b2236}
+#gate input{width:100%;border:1px solid #e2dac8;border-radius:12px;padding:12px;font:16px Inter,sans-serif;margin-bottom:8px;background:#fff;color:#1b2236}
+#gate .go{width:100%;border:0;border-radius:14px;padding:14px;font:700 16px Inter,sans-serif;color:#fff;background:linear-gradient(135deg,#6c4cff,#e0457b 60%,#ff8a3d);cursor:pointer}
+#gate .gm{margin:10px 0 0;font-size:14px;padding:10px 12px;border-radius:12px;display:none}#gate .gm.e{display:block;background:#fde3e3;color:#a02323}#gate .gm.o{display:block;background:#dcf7ea;color:#14674a}#gate .gm.w{display:block;background:#fff1cf;color:#7a5a00}
+#gate .gi{margin-top:14px;padding:12px;border-radius:14px;background:#f6f1e7;font-size:14px}#gate .gi b{display:block}
+#gate .gx{background:none;border:0;color:#6b6f7e;text-decoration:underline;cursor:pointer;margin-top:10px;font:14px Inter,sans-serif}
+</style>
+<div id="gate"><div class="gc"><div class="gl">M</div><h2>Pazarlama Müdürüm</h2><p>Üyelere özel yapay zekâ pazarlama asistanı.</p>
+<div id="gf"><div class="gt"><button id="gt1" class="on">Giriş yap</button><button id="gt2">Üyelik başvurusu</button></div>
+<input id="gn" placeholder="Ad soyad" hidden autocomplete="name"><input id="ge" type="email" placeholder="E-posta" autocomplete="email"><input id="gp" type="password" placeholder="Şifre (en az 6 karakter)" autocomplete="current-password">
+<button class="go" id="gg">Giriş yap</button></div>
+<div class="gm" id="gm"></div><div id="gi"></div><button class="gx" id="gx" hidden>Çıkış yap</button></div></div>
+<script>
+(()=>{
+const TK="km_tok",$=i=>document.getElementById(i),esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let mode="login",cfg=null;
+const msg=(t,k)=>{const m=$("gm");m.className="gm "+(t?k:"");m.textContent=t||""};
+const AUTH_ENABLED=false; // TEST: login'i geri açmak için true yapın
+const show=(note,k)=>{if(!AUTH_ENABLED)return;$("gate").style.display="flex";if(note)msg(note,k||"w");loadCfg()};
+const hide=()=>{$("gate").style.display="none"};
+async function loadCfg(){if(cfg)return;try{cfg=await(await fetch("/auth/config")).json()}catch(e){cfg={}}
+if(cfg.title||cfg.price||cfg.contact)$("gi").innerHTML='<div class="gi"><b>'+esc(cfg.title||"Üyelik")+'</b>'+(cfg.price?'<div>'+esc(cfg.price)+'</div>':'')+(cfg.contact?'<div>📞 '+esc(cfg.contact)+'</div>':'')+'</div>'}
+function setMode(m){mode=m;$("gt1").className=m=="login"?"on":"";$("gt2").className=m=="reg"?"on":"";$("gn").hidden=m!="reg";$("gg").textContent=m=="reg"?"Başvur":"Giriş yap";$("gp").autocomplete=m=="reg"?"new-password":"current-password";msg("")}
+$("gt1").onclick=()=>setMode("login");$("gt2").onclick=()=>setMode("reg");
+const tok=()=>localStorage.getItem(TK)||"";
+const logout=()=>{localStorage.removeItem(TK);const o=$("out");if(o)o.remove();setMode("login");$("gf").hidden=false;$("gx").hidden=true;show("")};
+$("gx").onclick=logout;
+function status(me){ // me: {status,plan,exp,name}
+ if(me.status=="active"&&(!me.exp||me.exp>Date.now())){hide();addOut(me);return true}
+ $("gf").hidden=true;$("gx").hidden=false;show(me.status=="blocked"?"Üyeliğiniz durdurulmuş. Lütfen yöneticiyle iletişime geçin.":me.status=="active"?"Üyelik süreniz dolmuş. Yenilemek için yöneticiyle iletişime geçin.":"Başvurunuz alındı ve onay bekliyor. Onaylandığında bu sayfayı yenileyip giriş yapabilirsiniz.","w");return false}
+function addOut(me){if($("out"))return;const b=document.createElement("button");b.className="btn";b.id="out";b.textContent="👤 Çıkış";const d=me.exp?Math.max(0,Math.ceil((me.exp-Date.now())/864e5)):null;b.title=(me.name||"")+" · "+(me.plan||"")+(d!=null?" · "+d+" gün kaldı":"");b.onclick=logout;const ex=$("ex");ex&&ex.parentNode.insertBefore(b,ex)}
+$("gg").onclick=async()=>{const e=$("ge").value.trim(),p=$("gp").value,n=$("gn").value.trim();msg("");
+ if(!e||!p||(mode=="reg"&&!n)){msg("Tüm alanları doldurun.","e");return}
+ $("gg").disabled=true;
+ try{const r=await fetch(mode=="reg"?"/auth/register":"/auth/login",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email:e,password:p,name:n})});const j=await r.json().catch(()=>({}));
+  if(mode=="reg"){if(r.ok){setMode("login");msg("Başvurunuz alındı! Yönetici onayladığında giriş yapabilirsiniz.","o")}else msg(j.err=="exists"?"Bu e-posta ile zaten başvuru var. Giriş yapın.":j.err=="invalid"?"Geçerli e-posta, ad ve en az 6 karakterli şifre girin.":"Şu an işlem yapılamıyor, sonra tekrar deneyin.","e")}
+  else{if(r.ok){localStorage.setItem(TK,j.token);status(j)}else msg(r.status==401?"E-posta veya şifre hatalı.":"Şu an işlem yapılamıyor, sonra tekrar deneyin.","e")}
+ }catch(x){msg("Bağlantı hatası. İnternetinizi kontrol edin.","e")}
+ $("gg").disabled=false};
+async function init(){if(!AUTH_ENABLED){hide();return}if(!tok()){show("");return}
+ try{const r=await fetch("/api/me",{headers:{authorization:"Bearer "+tok()}});if(r.ok)status(await r.json());else{localStorage.removeItem(TK);show("")}}catch(e){show("Bağlantı hatası.","e")}}
+async function call(m){const r=await fetch("/api",{method:"POST",headers:{"content-type":"application/json",authorization:"Bearer "+tok()},body:JSON.stringify({messages:m})});
+ if(r.ok)return(await r.json()).text;
+ const j=await r.json().catch(()=>({}));
+ if(r.status==401){localStorage.removeItem(TK);show("Oturumunuz sona erdi, lütfen tekrar giriş yapın.");throw{code:"auth"}}
+ if(r.status==403||r.status==402){status({status:r.status==402?"active":j.err,exp:1});throw{code:"auth"}}
+ if(r.status==429)throw{code:j.err=="quota"?"quota":"rate_limited"};
+ throw{code:"error"}}
+window.claude={use:async n=>{
+ if(n=="sample"){const f=async m=>({text:await call(typeof m=="string"?[{role:"user",content:m}]:m)});f.json=async p=>{const t=await call([{role:"user",content:p}]);const x=t.replace(/```json|```/g,"").trim();const a=x.indexOf("{"),b=x.lastIndexOf("}");if(a<0||b<a)throw{code:"error"};return JSON.parse(x.slice(a,b+1))};return f}
+ if(n=="downloads")return{save:async({filename,data})=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([data],{type:/\.html$/.test(filename)?"text/html":/\.svg$/.test(filename)?"image/svg+xml":"text/markdown"}));a.download=filename;a.click()}}}};
+window.addEventListener("load",init);
+})();
+</script>
+<script>
+const $=i=>document.getElementById(i),esc=s=>String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const TABS=[["brief","🏠 Başla"],["brand","🎨 Marka"],["cmp","🔎 Rakip"],["deck","🎬 Sunum"],["plan","✅ Plan"],["mk","✍️ İçerik"],["hk","🪝 Kanca"],["req","🧰 Talep"],["chat","💬 Konsey"]];
+const FIELDS=[["name","İşletme / marka adı"],["sector","Sektör ve ürün/hizmet"],["aud","Hedef kitle"],["budget","Aylık pazarlama bütçesi"],["goal","90 günlük ana hedef"]];
+let S={tab:"brief",brief:{},brand:null,cmp:null,req:{},hk:null,prefs:[],fbr:{},fbt:{},assets:{logo:null,products:[],docs:[]},deck:null,plan:null,mk:null,done:{},i:0,chat:[],busy:"",err:""},CP=[];
+try{Object.assign(S,JSON.parse(localStorage.getItem("kurmay2")||"{}"),{busy:"",err:""})}catch(e){}
+const save=()=>{try{localStorage.setItem("kurmay2",JSON.stringify({tab:S.tab,brief:S.brief,brand:S.brand,cmp:S.cmp,req:S.req,hk:S.hk,prefs:S.prefs,fbr:S.fbr,assets:S.assets,deck:S.deck,plan:S.plan,mk:S.mk,done:S.done,i:S.i,chat:S.chat.slice(-12)}))}catch(e){}};
+const ROLE=`Sen "Pazarlama Müdürüm Cebimde" uygulamasının yapay zekâsısın: 25 yıllık deneyimli, dünya standartlarında bir Pazarlama Müdürü (CMO) ve Danışman Konseyi (Strateji, Marka, Performans, Finans, Tüketici Psikolojisi, Pazar Araştırması). Kotler, Byron Sharp, Ries&Trout, Cialdini, Mavi Okyanus, JTBD, AARRR, Ansoff, STP/4P ve Cannes/Effie vakalarını bilirsin; Türkiye pazarını (Instagram, TikTok, Trendyol, sezon takvimi) iyi tanırsın. Türkçe yaz. Somut, özgün, uygulanabilir ol; sayı uydurma, tahmin ise "tahmini" de. Dil sade olsun: yönetim kurulu üyesi de anlasın. Her zaman kısa, öz ve etkili yaz; dolgu cümle, giriş ve tekrar kullanma.`;
+const fillPct=()=>Math.round(FIELDS.filter(f=>S.brief[f[0]]).length/FIELDS.length*100);const qc=(k,a)=>a.map(v=>`<button class="qc ${S.brief[k]==v?"on":""}" data-q="${k}|${v}">${v}</button>`).join("");const EX={name:"Ada Kahve",sector:"Butik kahve dükkânı (filtre kahve, tatlı)",aud:"25-40 yaş şehirli çalışanlar ve öğrenciler",budget:"10.000 TL",goal:"Mahalle dışından 300 yeni müşteri",extra:"Yakında 2 zincir rakip var; Instagram'da 800 takipçi"};const ctx=()=>"MARKA BRIEF'İ:\n"+FIELDS.map(f=>f[1]+": "+(S.brief[f[0]]||"belirtilmedi")).join("\n")+"\nNotlar/rakipler/mevcut durum: "+(S.brief.extra||"belirtilmedi")+(S.brand?"\nMarka kimliği: öz="+S.brand.essence+"; slogan="+S.brand.tagline+"; kişilik="+(S.brand.personality||[]).join(", ")+"; ses tonu örneği="+(S.brand.voice&&S.brand.voice.sample)+"; büyük fikir="+(S.brand.bigIdea&&S.brand.bigIdea.idea)+". Bu kimliğe sadık kal.":"")+(S.brief.comp?"\nBilinen rakipler: "+S.brief.comp:"")+(S.prefs.length?"\nKullanıcının geri bildirimleri (mutlaka dikkate al): "+S.prefs.join(" | "):"")+(((S.assets.docs||[]).map(d=>d.text).join("\n")+(S.brief.sample||"")).trim()?"\nMarka dokümanlarından/örnek içerikten ses tonunu ve bilgiyi öğren: "+((S.assets.docs||[]).map(d=>d.text).join("\n")+"\n"+(S.brief.sample||"")).slice(0,3500):"")+((S.assets.products||[]).length?"\nÜrün dosyaları: "+S.assets.products.map(x=>x.name).join(", "):"");
+const SCH={
+hk:`Viral kanca atölyesi: bu marka için 12 kanca üret; her biri farklı formül olsun (Merak boşluğu, Karşıt görüş, Hikâye başlangıcı, Sayı/Liste, Soru, Hata itirafı, Sosyal kanıt, Aciliyet, Mit çürütme, Önce/Sonra, Sır paylaşımı, Meydan okuma). hook: ilk 3 saniyede söylenecek veya yazılacak cümle, en fazla 10 kelime. visual: ilk karenin görsel fikri, en fazla 10 kelime. why: neden işe yarar, en fazla 8 kelime. Ayrıca 10 hashtag (geniş, niş ve yerel karışık) ve 3 yayın saati denemesi öner (tahmini). SADECE JSON döndür: {"hooks":[{"formula":"","hook":"","visual":"","why":""}],"hashtags":["#"],"times":["Salı 19:00"]}`,
+cmp:`Detaylı bir rakip benchmark analizi yap. Brief'teki sektöre göre 4 rakip değerlendir (kullanıcı rakip verdiyse önce onları kullan; vermediyse sektörün bilinen oyuncularını veya gerçekçi rakip tiplerini seç). Bilmediğin fiyat veya sayıyı uydurma, 'doğrulanmalı' yaz; skorlar 1-10 arası TAHMİNİ olsun. 'you' skorları markanın ulaşabileceği hedef konumdur. Her metin en fazla 10 kelime. SADECE JSON döndür: {"market":"pazar özeti, en fazla 30 kelime","competitors":[{"name":"","type":"doğrudan|dolaylı","positioning":"","strengths":["2 madde"],"weaknesses":["2 madde"],"price":"","channels":["2-3 kanal"],"scores":{"marka":0,"fiyat":0,"dijital":0,"deneyim":0,"guven":0}}],"you":{"scores":{"marka":0,"fiyat":0,"dijital":0,"deneyim":0,"guven":0}},"gaps":["3 fırsat boşluğu"],"swot":{"s":["2"],"w":["2"],"o":["2"],"t":["2"]},"moves":["5 somut hamle, en fazla 12 kelime"]}`,
+brand:`Marka Danışmanı ve Yaratıcı Direktör olarak bu markaya özgü, cesur ve ayırt edici bir marka kiti üret. Klişelerden (kaliteli, güvenilir, yenilikçi) kesinlikle kaçın; sürprizli ve akılda kalıcı ol. Her metin kısa ve vurucu. 5 renk, 3 yaratıcı rota. SADECE JSON döndür: {"essence":"marka özü, 1 cümle","tagline":"slogan, en fazla 6 kelime","personality":["3 tek kelimelik kişilik özelliği"],"voice":{"do":["3 madde, en fazla 6 kelime"],"dont":["3 madde, en fazla 6 kelime"],"sample":"örnek sosyal medya cümlesi"},"palette":[{"name":"renk adı","hex":"#RRGGBB","role":"ana|vurgu|zemin|metin"}],"manifesto":"en fazla 40 kelime","story":"marka hikâyesi, en fazla 45 kelime","bigIdea":{"name":"kampanya adı","insight":"tüketici içgörüsü, en fazla 15 kelime","idea":"büyük fikir, en fazla 25 kelime"},"routes":[{"title":"rota adı","concept":"en fazla 20 kelime","hook":"ilk 3 saniyelik kanca"}],"viral":["3 viral içerik formatı, en fazla 14 kelime"],"names":["5 alternatif marka veya ürün adı"]}`,
+deck:`Yönetim kuruluna sunulacak 9 slaytlık sunum hazırla. Sıra: 1 kapak (type t), 2 mevcut durum ve fırsat, 3 hedef kitle içgörüsü, 4 konumlandırma ve ana fikir, 5 strateji sütunları (teori çerçevesini sade anlat, örn. STP, Sharp), 6 90 günlük uygulama planı, 7 bütçe dağılımı ve beklenen sonuçlar (kpis dolu; bunlar tahmini hedeflerdir, her etiketin sonuna "hedef" yaz), 8 riskler ve önlemler, 9 yönetimden karar talebi. Her slaytta en fazla 3 madde, her madde en fazla 9 kelime, vurucu ve net; başlık en fazla 6 kelime; alt başlık tek kısa cümle. Her slayta uygun tek bir emoji (icon) ekle. SADECE JSON döndür: {"slides":[{"type":"t|n","icon":"","title":"","subtitle":"","bullets":[""],"kpis":[{"label":"","value":""}],"note":"konuşmacı notu, 1 cümle"}]}`,
+plan:`90 günlük uygulama planı: tam 12 görev, 3 faza dağıt. Başlık en fazla 8 kelime ve fiille başlasın; sahibi tek rol; kpi kısa ve sayısal (örn. '+50 takipçi'). SADECE JSON döndür: {"tasks":[{"phase":"1. Hafta|2-4. Hafta|2-3. Ay","title":"","owner":"","kpi":"","priority":"Yüksek|Orta|Düşük"}]}`,
+mk:`İlk pazarlama içerik paketini üret: 5 slogan (en fazla 6 kelime), 6 gönderi (format: Reels/Carousel/Story/Post karışık; hook en fazla 8 kelime, caption en fazla 25 kelime, cta en fazla 4 kelime), 3 reklam (başlık en fazla 6, metin en fazla 20 kelime), 1 e-posta (konu en fazla 8 kelime, gövde en fazla 60 kelime). Kısa, vurucu, markaya özel; klişelerden kaçın, sürprizli ve paylaşılabilir ol; marka kimliği varsa ses tonuna sadık kal. SADECE JSON döndür: {"slogans":[""],"posts":[{"format":"","hook":"","caption":"","cta":""}],"ads":[{"headline":"","text":""}],"email":{"subject":"","body":""}}`};
+const RQ={
+name:`10 özgün marka veya ürün adı öner (Türkçe ve global karışık, kısa, telaffuzu kolay, akılda kalıcı). SADECE JSON döndür: {"items":[{"name":"","why":"en fazla 12 kelime","tagline":"en fazla 5 kelime"}]}`,
+logo:`3 farklı logo konsepti tasarla. Her biri sade, ölçeklenebilir ve markanın kimliğini yansıtan bir SVG olsun: viewBox 0 0 200 200, en fazla 12 şekil, marka renklerini kullan, yazıda font-family Georgia veya Arial, SVG içinde SADECE tek tırnak kullan, script ve image yok. SADECE JSON döndür: {"items":[{"name":"konsept adı","concept":"en fazla 15 kelime","svg":"<svg ...>...</svg>"}]}`,
+brochure:`Tek sayfalık tanıtım broşürü içeriği yaz (3 fayda, 3 adım). Rakam UYDURMA: brief'te verilmeyen hiçbir sayı, yüzde veya iddia yazma. stat.value kısa bir vaat olsun (örn. 'Her gün taze'), stat.label kısa açıklama veya boş olsun. contact: marka adı + [telefon] · [adres] · [@instagram] yer tutucuları. SADECE JSON döndür: {"headline":"en fazla 7 kelime","sub":"en fazla 16 kelime","benefits":[{"icon":"emoji","title":"en fazla 3 kelime","text":"en fazla 14 kelime"}],"steps":["en fazla 6 kelime"],"stat":{"value":"","label":""},"cta":"en fazla 5 kelime","contact":"örnek iletişim satırı"}`,
+road:`12 aylık stratejik yol haritası hazırla (4 çeyrek). SADECE JSON döndür: {"vision":"en fazla 15 kelime","northStar":"tek ana ölçüt","quarters":[{"q":"1. Çeyrek","theme":"en fazla 4 kelime","goals":["2 hedef, en fazla 8 kelime"],"moves":["3 hamle, en fazla 8 kelime"],"kpi":"kısa sayısal hedef"}],"risks":["2 risk, en fazla 8 kelime"]}`};
+const pals=()=>(S.brand&&S.brand.palette||[]).map(c=>c.hex).filter(c=>/^#[0-9a-f]{6}$/i.test(c));
+const cleanSvg=s=>{s=String(s||"").replace(/<script[\s\S]*?<\/script>/gi,"").replace(/\son\w+\s*=\s*("[^"]*"|'[^']*')/gi,"").replace(/<foreignObject[\s\S]*?<\/foreignObject>/gi,"");if(!/^\s*<svg/i.test(s))return "";if(!/xmlns=/.test(s))s=s.replace(/<svg/i,"<svg xmlns='http://www.w3.org/2000/svg'");return s},svgUri=s=>"data:image/svg+xml;charset=utf-8,"+encodeURIComponent(cleanSvg(s));
+const BRCSS=`.br{background:#fff;color:#1b2236;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.15);font-family:Inter,Arial,sans-serif;max-width:640px;margin:0 auto}.br .bh{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:30px 26px}.br h2{font:700 clamp(26px,6vw,38px) Georgia,serif;margin:0 0 8px;line-height:1.1}.br .bh p{margin:0 0 14px;opacity:.95}.br .bt{display:inline-block;background:#fff;color:#1b2236;padding:9px 18px;border-radius:99px;font-weight:700}.br .bb{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:22px 26px}.br .bb div{background:#f6f1e7;border-radius:14px;padding:14px}.br .bb b{display:block;margin:4px 0}.br .bb span{font-size:26px}.br .bl{height:44px;margin-bottom:10px;display:block;background:#fff;border-radius:8px;padding:4px}.br .bg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 26px 14px}.br .bg img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}.br .bs{padding:0 26px 10px;display:flex;gap:10px;flex-wrap:wrap}.br .bs div{flex:1;min-width:140px;border-top:3px solid var(--c2);padding-top:6px;font-size:14px}.br .bn{margin:14px 26px;padding:14px;border-radius:14px;background:#1b2236;color:#fff;text-align:center}.br .bn b{font:700 28px Georgia,serif;color:#ffd27a;display:block}.br .bf{padding:14px 26px 22px;color:#666;font-size:13px;text-align:center}`;
+const brHtml=(b,c1,c2)=>`<div class="br" style="--c1:${c1};--c2:${c2}"><div class="bh">${S.assets.logo?`<img class="bl" src="${S.assets.logo}">`:""}<h2>${esc(b.headline)}</h2><p>${esc(b.sub)}</p><span class="bt">${esc(b.cta)}</span></div><div class="bb">${(b.benefits||[]).map(x=>`<div><span>${esc(x.icon)}</span><b>${esc(x.title)}</b>${esc(x.text)}</div>`).join("")}</div>${(S.assets.products||[]).length?`<div class="bg">${S.assets.products.slice(0,3).map(x=>`<img src="${x.data}">`).join("")}</div>`:""}<div class="bs">${(b.steps||[]).map((x,k)=>`<div><b>${k+1}.</b> ${esc(x)}</div>`).join("")}</div>${b.stat&&b.stat.value&&!/\d/.test(b.stat.value)?`<div class="bn"><b>${esc(b.stat.value)}</b>${esc(b.stat.label||"")}</div>`:""}<div class="bf">${esc(S.brief.contact||b.contact)}</div></div>`;
+const brC=()=>{const d=pals().filter(c=>{const n=parseInt(c.slice(1),16);return ((n>>16)*299+(n>>8&255)*587+(n&255)*114)/1000<150});return[d[0]||"#6c4cff",d[1]||"#e0457b"]};
+const em=e=>e&&e.code=="quota"?"Günlük kullanım hakkınız doldu. Yarın tekrar deneyin ya da yöneticiyle iletişime geçin.":e&&e.code=="auth"?"Oturumunuz geçersiz; lütfen giriş yapın.":e&&e.code=="not_granted"?"Yapay zekâ erişimi için izin gerekiyor; izin verip tekrar deneyin.":e&&e.code=="rate_limited"?"Biraz bekleyip tekrar deneyin.":"Üretim sırasında bir sorun oluştu, tekrar deneyin.";
+async function genReq(k){const sm=await claude.use("sample");if(!sm){S.err="Yapay zekâ erişimi yok.";return render()}
+if(!S.brief.name&&!S.brief.sector){S.err="Önce Brief sekmesinde işletme adı ve sektörü yazın.";S.tab="brief";return render()}
+S.busy="r"+k;S.err="";render();const p=pals().length?"\nMarka renkleri: "+pals().join(", "):"";
+try{S.req[k]=await sm.json(ROLE+"\n\n"+ctx()+p+"\n\nGÖREV: "+RQ[k]+vary(S.req[k]),{modelTier:"complex",cache:false})}catch(e){S.err=em(e)}
+S.busy="";save();render()}
+async function dlSvg(k){const d=await claude.use("downloads");const l=S.req.logo&&S.req.logo.items[k];if(!d||!l)return;try{await d.save({filename:"logo-"+(k+1)+".svg",data:cleanSvg(l.svg)})}catch(e){}}
+async function dlBr(){const d=await claude.use("downloads");const b=S.req.brochure;if(!d||!b)return;const p=pals();try{await d.save({filename:"brosur.html",data:"<!DOCTYPE html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Broşür</title><style>body{margin:0;padding:20px;background:#eee}"+BRCSS+"</style>"+brHtml(b,...brC())})}catch(e){}}
+const ANG=["mizah","nostalji","merak uyandıran","cesur ve tartışmalı","samimi hikâye","FOMO ve aciliyet","sosyal kanıt","minimalist ve şık","oyunlaştırma","topluluk ve aidiyet","şaşırtıcı bilgi","önce/sonra dönüşümü"];
+const vary=o=>"\nYaratıcı açı bu sefer: "+ANG[Math.floor(Math.random()*ANG.length)]+". Sıradan ve klişe fikirlerden kaçın."+(o?" Daha önce üretilenlerden TAMAMEN farklı fikirler ver, hiçbirini tekrarlama. Önceki: "+JSON.stringify(o).slice(0,800):"");
+const getp=(o,p)=>p==""?o:p.split(".").reduce((a,k)=>a==null?a:a[k],o),setp=(o,p,v)=>{const a=p.split("."),l=a.pop();getp(o,a.join("."))[l]=v};
+const altb=p=>`<button class="cp" data-alt="${p}">${S.alt==p?"⏳":"👎 Başka"}</button>`;
+const fbp=k=>`<div class="fb"><b>💬 Geri bildirim ver</b><span class="mu">Beğenmediğinizi yazın ya da söyleyin; konsey düzeltip yanıtlasın.</span><textarea rows="2" data-fb="${k}" placeholder="Örn: Daha esprili ve genç bir dil olsun; ikinci fikri beğenmedim.">${esc(S.fbt[k]||"")}</textarea><div class="row"><button class="btn" data-mic="fb:${k}">${S.mic=="fb:"+k?"⏹ Dinliyorum…":"🎤 Konuş"}</button><button class="btn pri" data-imp="${k}" ${S.busy?"disabled":""}>${S.busy=="i"+k?"Geliştiriliyor…":"✨ Geliştir"}</button></div>${S.fbr[k]?`<div class="fbr"><small>KONSEY YANITI</small>${esc(S.fbr[k])} <button class="cp" data-sa="${encodeURIComponent(S.fbr[k])}">🔊</button></div>`:""}</div>`;
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(t).replace(/[*•#]/g,""));u.lang="tr-TR";speechSynthesis.speak(u)}catch(e){}}
+let REC=null;
+function mic(tg){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(!SR){S.err="Bu tarayıcı sesli girişi desteklemiyor. Chrome veya Safari deneyin.";return render()}
+if(REC){REC.stop();return}
+const r=new SR();r.lang="tr-TR";r.interimResults=true;r.continuous=false;REC=r;S.mic=tg;S.err="";let fin="";render();
+r.onresult=e=>{let t="";for(const x of e.results)t+=x[0].transcript;fin=t;if(tg=="chat"){S.cqv=t;const q=$("cq");if(q)q.value=t}else{const k=tg.slice(3);S.fbt[k]=t;const q=document.querySelector('[data-fb="'+k+'"]');if(q)q.value=t}};
+r.onerror=e=>{S.err=(e.error=="not-allowed"||e.error=="service-not-allowed")?"Mikrofon izni verilmedi ya da bu ortamda kullanılamıyor. Kendi adresinizdeki sürümde deneyin.":"Ses alınamadı, tekrar deneyin."};
+r.onend=()=>{REC=null;S.mic=null;render();if(tg=="chat"&&S.vm&&fin.trim())ask()};
+try{r.start()}catch(e){REC=null;S.mic=null;render()}}
+async function alt(p){if(S.alt||S.busy)return;const sm=await claude.use("sample");if(!sm)return;const old=getp(S,p),sib=getp(S,p.split(".").slice(0,-1).join(".")),str=typeof old=="string";
+S.alt=p;S.err="";render();
+try{const v=await sm.json(ROLE+"\n\n"+ctx()+"\n\nKullanıcı bu öğeyi BEĞENMEDİ. TAMAMEN FARKLI, daha yaratıcı ve cesur bir alternatif üret (farklı açı, farklı kelimeler, aynı kısalık kuralları). Şunlara benzemesin: "+JSON.stringify(sib).slice(0,900)+"\nSADECE JSON döndür: "+(str?'{"v":"yeni metin"}':"aynı alanlara sahip TEK öğe. Örnek şekil: "+JSON.stringify(old).slice(0,500)),{modelTier:"complex",cache:false});
+const nv=str?v.v:v;if(nv==null||nv==="")throw 0;setp(S,p,nv)}catch(e){S.err=em(e)}
+S.alt="";save();render()}
+async function improve(k){const txt=(S.fbt[k]||"").trim();if(!txt){S.fbr[k]="Önce geri bildiriminizi yazın ya da konuşun.";return render()}
+if(S.busy)return;const sm=await claude.use("sample");if(!sm)return;const old=getp(S,k);S.busy="i"+k;S.err="";render();
+try{const r=await sm.json(ROLE+"\n\n"+ctx()+"\n\nMEVCUT ÇIKTI (JSON): "+JSON.stringify(old)+"\n\nKULLANICI GERİ BİLDİRİMİ: "+txt+"\n\nGeri bildirimi uygula: beğenileni koru, beğenilmeyeni TAMAMEN değiştir. Aynı JSON şemasını ve kısalık kurallarını koru. Ayrıca ne değiştirdiğini ve nedenini en fazla 2 cümleyle, birinci tekil kişiyle açıkla. SADECE JSON: {\"reply\":\"\",\"data\":<aynı şemada tüm çıktı>}",{modelTier:"complex",cache:false});
+if(!r||!r.data)throw 0;setp(S,k,r.data);S.fbr[k]=r.reply||"Güncelledim.";S.prefs=[txt.slice(0,140)].concat(S.prefs).slice(0,6);S.fbt[k]="";if(k=="deck")S.i=0;if(k=="plan")S.done={};if(S.vm)say(S.fbr[k])}catch(e){S.err=em(e)}
+S.busy="";save();render()}
+async function scr(i){if(S.alt)return;const sm=await claude.use("sample");if(!sm)return;const h=S.hk.hooks[i];S.alt="sc"+i;S.err="";render();
+try{h.script=await sm.json(ROLE+"\n\n"+ctx()+"\n\nBu kanca için 20-30 saniyelik Reels/TikTok senaryosu yaz (4-5 sahne). Kanca: "+h.hook+" ("+h.formula+"). SADECE JSON: {\"scenes\":[{\"t\":\"0-3 sn\",\"say\":\"en fazla 14 kelime\",\"show\":\"görüntü, en fazla 8 kelime\"}],\"caption\":\"en fazla 25 kelime\",\"cta\":\"en fazla 5 kelime\",\"sound\":\"ses ve müzik önerisi\"}"+vary(h.script),{modelTier:"complex",cache:false})}catch(e){S.err=em(e)}
+S.alt="";save();render()}
+const shrink=(f,mx)=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>{if(f.type=="image/svg+xml"){res(r.result);return}const i=new Image();i.onload=()=>{const k=Math.min(1,mx/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=Math.max(1,Math.round(i.width*k));c.height=Math.max(1,Math.round(i.height*k));c.getContext("2d").drawImage(i,0,0,c.width,c.height);res(c.toDataURL(f.type=="image/png"?"image/png":"image/jpeg",.8))};i.onerror=rej;i.src=r.result};r.onerror=rej;r.readAsDataURL(f)});
+async function upFile(kind,files){S.err="";for(const f of files){try{if(kind=="doc"){S.assets.docs.push({name:f.name,text:(await f.text()).slice(0,6000)})}else{const d=await shrink(f,kind=="logo"?360:640);if(kind=="logo")S.assets.logo=d;else if(S.assets.products.length<6)S.assets.products.push({name:f.name,data:d})}}catch(e){S.err="Dosya okunamadı: "+f.name}}save();render()}
+const assetsUI=()=>{const A=S.assets;return `<div class="ph">Marka dosyaları</div><div class="cd af"><span class="mu">Logo, ürün fotoğrafları ve örnek metinler. Dosyalar yalnızca bu cihazda saklanır; yapay zekâya sadece metin içeriği gider.</span><div class="row"><label class="btn up">🖼 Logo yükle<input type="file" accept="image/*" data-up="logo" hidden></label><label class="btn up">📦 Ürün fotoğrafı<input type="file" accept="image/*" multiple data-up="prod" hidden></label><label class="btn up">📄 Metin dosyası<input type="file" accept=".txt,.md,.csv,.json,text/plain" multiple data-up="doc" hidden></label></div><div class="thumbs">${A.logo?`<div><img src="${A.logo}"><button class="x" data-rm="logo">✕</button></div>`:""}${(A.products||[]).map((p,i)=>`<div><img src="${p.data}"><button class="x" data-rm="p${i}">✕</button></div>`).join("")}</div>${(A.docs||[]).length?`<div class="docs">${A.docs.map((d,i)=>`<span class="bd">📄 ${esc(d.name)} <a data-rm="d${i}">✕</a></span>`).join(" ")}</div>`:""}<label>MARKA METNİ / ÖRNEK İÇERİK (ses tonunu öğrenmek için yapıştırın)</label><textarea rows="3" data-b="sample">${esc(S.brief.sample||"")}</textarea></div>`};
+async function gen(k){
+ if(!S.brief.name&&!S.brief.sector){S.err="Önce Brief sekmesinde en az işletme adı ve sektörü yazın.";S.tab="brief";return render()}
+ const sm=await claude.use("sample");if(!sm){S.err="Bu görünümde yapay zekâ erişimi yok.";return render()}
+ S.busy=k;S.err="";render();
+ try{S[k]=await sm.json(ROLE+"\n\n"+ctx()+"\n\nGÖREV: "+SCH[k]+vary(S[k]),{modelTier:"complex",cache:false});if(k=="deck")S.i=0;if(k=="plan")S.done={}}
+ catch(e){S.err=em(e)}
+ S.busy="";save();render()}
+const burst=()=>{const e=["🎉","✨","🚀","🎯","💡","🔥"];for(let i=0;i<14;i++){const s=document.createElement("span");s.className="cf";s.textContent=e[i%6];s.style.left=Math.random()*100+"vw";s.style.animationDelay=Math.random()*.6+"s";document.body.appendChild(s);setTimeout(()=>s.remove(),3300)}};async function all(){window.__a=1;for(const k of["brand","deck","plan","mk","hk"]){await gen(k);if(S.err){window.__a=0;return}}window.__a=0;S.tab="deck";render();burst()}
+const wait=()=>`<div class="empty ld"><div class="dots"><span></span><span></span><span></span></div><div class="msgs"><p>🧭 Strateji Danışmanı pazarı tarıyor…</p><p>🎨 Marka Danışmanı fikirleri çiziyor…</p><p>📈 Performans Danışmanı rakamları hesaplıyor…</p><p>🧠 Psikoloji Danışmanı müşteriyi çözümlüyor…</p></div><small>Birazdan hazır, 30-60 sn sürebilir</small></div>`;
+const cp=t=>{CP.push(t);return `<button class="cp" data-cp="${CP.length-1}">Kopyala</button>`};
+function genBar(k,l){return `<div class="row"><button class="btn pri" data-g="${k}" ${S.busy?"disabled":""}>${S[k]?"↻ Yeniden üret":l}</button></div>`+(S.err?`<div class="err">${esc(S.err)}</div>`:"")}
+const V={
+brief(){return `<div class="hero"><span class="fl f1">📈</span><span class="fl f2">💡</span><span class="pill keep">✨ 3 adımda hazır: anlat, üret, sun</span><h1>Fikrinizi <em>kampanyaya</em> çevirelim!</h1><p>Birkaç soruyu yanıtlayın; danışman konseyi yönetim sunumunu, aksiyon planını ve içerikleri sizin için üretsin.</p><div class="hs"><div><b>4</b>üretim modülü</div><div><b>9</b>slaytlık sunum</div><div><b>12</b>aksiyon</div></div></div>
+<div class="qs">HIZLI SEÇİM · SEKTÖR</div><div class="qr">${qc("sector",["Kafe & Restoran","Butik & Giyim","E-ticaret","Güzellik & Kuaför","Eğitim & Danışmanlık","Yazılım & App"])}</div>
+<div class="qs">BÜTÇE</div><div class="qr">${qc("budget",["5.000 TL","10.000 TL","25.000 TL","50.000 TL+"])}</div>
+<div class="qs">HEDEF</div><div class="qr">${qc("goal",["Daha çok müşteri","Online satışı artırmak","Marka bilinirliği","Instagram'da büyümek"])}</div>
+<div class="qs">BRİF DOLULUK</div><div class="pg"><i style="width:${fillPct()}%"></i></div>
+<div class="f">${FIELDS.map(f=>`<div><label>${f[1].toUpperCase()}</label><input data-b="${f[0]}" value="${esc(S.brief[f[0]]||"")}"></div>`).join("")}</div>
+<label>RAKİPLER / MEVCUT DURUM / NOTLAR</label><textarea rows="3" data-b="extra">${esc(S.brief.extra||"")}</textarea>
+<div class="row"><button class="btn pri big" id="all" ${S.busy?"disabled":""}>🚀 Sihri Başlat: Tam Paketi Üret</button><button class="btn" data-ex="1">🎲 Örnekle doldur</button></div><p class="mu">Marka kiti + sunum + aksiyon planı + içerikler, tek tuşla.</p>
+${S.busy?wait():""}${S.err?`<div class="err">${esc(S.err)}</div>`:""}${assetsUI()}<div class="ph">Bölümler</div><div class="sg">${tiles("brief")}</div>`},
+brand(){const b=S.brand;let h=`<div class="hero"><span class="pill">🎨 Marka Danışmanı + Yaratıcı Direktör</span><h1>Markanıza <em>kimlik</em> verelim.</h1><p>Slogan, kişilik, renkler, ses tonu, manifesto ve büyük kampanya fikri.</p></div>`+genBar("brand","Marka Kitini Üret");
+if(S.busy=="brand")return h+wait();if(!b)return h+`<div class="empty">Henüz marka kiti yok. Briefi doldurup "Marka Kitini Üret"e basın.</div>`;
+const L=a=>(a||[]).map(x=>`<li>${esc(x)}</li>`).join(""),hx=c=>/^#[0-9a-f]{6}$/i.test(c)?c:"#888888",tc=c=>{const n=parseInt(hx(c).slice(1),16);return ((n>>16)*299+(n>>8&255)*587+(n&255)*114)/1000>150?"#1b2236":"#fff"},v=b.voice||{},bi=b.bigIdea||{};
+h+=`<div class="bk">${S.assets.logo?`<img class="blg" src="${S.assets.logo}">`:""}<small>MARKANIN ÖZÜ</small><div class="bq">${esc(b.essence)}</div><div class="tg">${esc(b.tagline)} ${cp(b.tagline||"")} ${altb("brand.tagline")}</div><div class="chips">${(b.personality||[]).map(p=>`<span class="bd">${esc(p)}</span>`).join("")}</div></div>`;
+h+=`<div class="ph">Renk paleti</div><div class="sw">${(b.palette||[]).map(c=>`<div class="sc" style="background:${hx(c.hex)};color:${tc(c.hex)}"><b>${esc(c.name)}</b><small>${esc(c.hex)} · ${esc(c.role)}</small></div>`).join("")}</div>`;
+h+=`<div class="ph">Ses tonu</div><div class="two"><div class="cd"><small>✅ YAP</small><ul>${L(v.do)}</ul></div><div class="cd"><small>🚫 YAPMA</small><ul>${L(v.dont)}</ul></div></div><div class="cd"><small>ÖRNEK CÜMLE ${cp(v.sample||"")}</small>${esc(v.sample)}</div>`;
+h+=`<div class="ph">Büyük fikir</div><div class="cd bi"><small>${esc(bi.name)} ${altb("brand.bigIdea")} ${cp((bi.name||"")+": "+(bi.idea||""))}</small><b>${esc(bi.idea)}</b>
+💡 İçgörü: ${esc(bi.insight)}</div>`;
+h+=`<div class="ph">3 yaratıcı rota</div>`+(b.routes||[]).map((r,k)=>`<div class="cd"><small>${esc(r.title)} ${altb("brand.routes."+k)} ${cp(r.title+": "+r.concept)}</small>${esc(r.concept)}
+🎬 Kanca: <b>${esc(r.hook)}</b></div>`).join("");
+h+=`<div class="ph">Manifesto</div><div class="cd"><small>MANİFESTO ${cp(b.manifesto||"")}</small>${esc(b.manifesto)}</div><div class="ph">Marka hikâyesi</div><div class="cd">${esc(b.story)}</div><div class="ph">Viral içerik formatları</div><div class="cd"><ul>${L(b.viral)}</ul></div><div class="ph">Alternatif adlar</div><div class="chips">${(b.names||[]).map(n=>`<div class="cd">${esc(n)}</div>`).join("")}</div>`+fbp("brand");return h},
+cmp(){const c=S.cmp;let h=`<div class="hero"><span class="pill">🔎 Benchmark</span><h1>Rakiplerinizi <em>çözümleyelim.</em></h1><p>Pazar haritası, skor tablosu, boşluk fırsatları ve hamle planı.</p></div><label>BİLDİĞİNİZ RAKİPLER (virgülle ayırın; boşsa konsey belirler)</label><textarea rows="2" data-b="comp">${esc(S.brief.comp||"")}</textarea>`+genBar("cmp","Benchmark Analizini Üret");
+if(S.busy=="cmp")return h+wait();if(!c||!c.competitors)return h+`<div class="empty">Henüz analiz yok.</div>`;
+const M=[["marka","Marka"],["fiyat","Fiyat"],["dijital","Dijital"],["deneyim","Deneyim"],["guven","Güven"]],rows=c.competitors.concat([{name:"⭐ "+(S.brief.name||"Siz")+" (hedef)",scores:(c.you&&c.you.scores)||{}}]),L=a=>(a||[]).map(x=>`<li>${esc(x)}</li>`).join("");
+h+=`<div class="note"><b>Pazar:</b> ${esc(c.market)}</div><div class="ph">Skor tablosu (1-10, tahmini)</div><div class="tw"><table class="tbl"><tr><th>Rakip</th>${M.map(m=>`<th>${m[1]}</th>`).join("")}</tr>`+rows.map(r=>`<tr><td><b>${esc(r.name)}</b></td>${M.map(m=>{const s=Math.max(0,Math.min(10,+((r.scores||{})[m[0]])||0));return `<td style="background:rgba(224,69,123,${(s/10*.7).toFixed(2)})">${s}</td>`}).join("")}</tr>`).join("")+`</table></div>`;
+h+=`<div class="ph">Rakip profilleri</div>`+c.competitors.map(r=>`<div class="cd"><small>${esc(String(r.type).toUpperCase())} ${cp(r.name+": "+r.positioning)}</small><b>${esc(r.name)}</b> · ${esc(r.positioning)}
+✅ ${(r.strengths||[]).map(esc).join(" · ")}
+⚠️ ${(r.weaknesses||[]).map(esc).join(" · ")}
+💰 ${esc(r.price)}  📣 ${(r.channels||[]).map(esc).join(", ")}</div>`).join("");
+const sw=c.swot||{};h+=`<div class="ph">Boşluk fırsatları</div><div class="cd bi"><ul>${L(c.gaps)}</ul></div><div class="ph">SWOT</div><div class="two"><div class="cd"><small>💪 GÜÇLÜ</small><ul>${L(sw.s)}</ul></div><div class="cd"><small>🩹 ZAYIF</small><ul>${L(sw.w)}</ul></div><div class="cd"><small>🚀 FIRSAT</small><ul>${L(sw.o)}</ul></div><div class="cd"><small>⚡ TEHDİT</small><ul>${L(sw.t)}</ul></div></div><div class="ph">5 hamle</div><div class="cd"><ol>${L(c.moves)}</ol></div><div class="note">Skorlar, fiyatlar ve rakip bilgileri yapay zekâ tahminidir. Rakiplerin sitesi ve sosyal medyasından doğrulayın.</div>`+fbp("cmp");return h},
+req(){const R=S.req||{};let h=`<div class="hero"><span class="pill">🧰 Talep Merkezi</span><h1>İsteyin, <em>üretelim.</em></h1><p>İsim, logo, broşür ve stratejik yol haritası. Tek dokunuşla.</p></div><div class="grid">`+[["name","🏷️","Marka adı bul","10 özgün isim ve slogan"],["logo","🖼️","Logo tasarla","3 vektör (SVG) konsept"],["brochure","📄","Broşür hazırla","Tek sayfalık, indirilebilir"],["road","🗺️","Stratejik yol haritası","12 aylık, 4 çeyrek"]].map(c=>`<button class="card ${R[c[0]]?"ok":""}" data-r="${c[0]}" ${S.busy?"disabled":""}><i class="ci">${c[1]}</i><b>${c[2]}</b><span>${c[3]}</span><em class="st">${R[c[0]]?"✓ ÜRETİLDİ · YENİLE":"TALEP ET →"}</em></button>`).join("")+`</div>`;
+if(S.err)h+=`<div class="err">${esc(S.err)}</div>`;if(S.busy&&S.busy[0]=="r")h+=wait();
+if(R.name&&R.name.items)h+=`<div class="ph">Marka adı önerileri</div><div class="grid">`+R.name.items.map((i,k)=>`<div class="cd"><small>${esc(i.tagline)} ${altb("req.name.items."+k)} ${cp(i.name+" - "+i.tagline)}</small><b>${esc(i.name)}</b>\n${esc(i.why)}</div>`).join("")+`</div><div class="note">Müsaitliği doğrulayın: App Store, Türk Patent, alan adı, Instagram.</div>`+fbp("req.name");
+if(R.logo&&R.logo.items)h+=`<div class="ph">Logo konseptleri</div><div class="grid w">`+R.logo.items.map((l,k)=>`<div class="cd lc"><img alt="" src="${svgUri(l.svg)}"><small>${esc(l.name)}</small>${esc(l.concept)}
+<button class="cp" data-sv="${k}">SVG indir</button> ${altb("req.logo.items."+k)}</div>`).join("")+`</div>`+fbp("req.logo");
+if(R.brochure){const p=pals();h+=`<div class="ph">Broşür</div><label>İLETİŞİM SATIRI (broşürde görünür)</label><input data-b="contact" value="${esc(S.brief.contact||"")}" placeholder="0555 000 00 00 · Adres · @instagram"><style>${BRCSS}</style>`+brHtml(R.brochure,...brC())+`<div class="row"><button class="btn" id="bdl">⬇ Broşürü indir (HTML; yazdırınca PDF olur)</button></div>`+fbp("req.brochure")}
+if(R.road&&R.road.quarters){const r=R.road;h+=`<div class="ph">Stratejik yol haritası</div><div class="bk"><small>VİZYON</small><div class="bq">${esc(r.vision)}</div><div class="tg">⭐ ${esc(r.northStar)}</div></div><div class="grid w">`+r.quarters.map((q,k)=>`<div class="cd qd c${k}"><small>${esc(q.q)}</small><b>${esc(q.theme)}</b>
+🎯 ${(q.goals||[]).map(esc).join(" · ")}
+🛠 ${(q.moves||[]).map(esc).join(" · ")}
+📊 ${esc(q.kpi)}</div>`).join("")+`</div>`+(r.risks&&r.risks.length?`<div class="note"><b>Riskler:</b> ${r.risks.map(esc).join(" · ")}</div>`:"")+fbp("req.road")}
+return h},
+hk(){const c=S.hk;let h=`<div class="hero"><h1>Akışı durduran <em>kancalar.</em></h1><p>İlk 3 saniyede izleyiciyi yakalayan cümleler, görsel fikirler ve hazır Reels senaryoları.</p></div>`+genBar("hk","Kancaları Üret");
+if(S.busy=="hk")return h+wait();if(!c||!c.hooks)return h+`<div class="empty">Henüz kanca yok. Briefi doldurup "Kancaları Üret"e basın.</div>`;
+h+=`<div class="ph">12 kanca</div>`+c.hooks.map((x,i)=>{const sc=x.script;return `<div class="cd"><small>${esc(x.formula)} ${altb("hk.hooks."+i)} ${cp(x.hook)}</small><b>🪝 ${esc(x.hook)}</b>\n🎥 ${esc(x.visual)}\n💡 ${esc(x.why)}${sc?`<div class="scr">${(sc.scenes||[]).map(z=>`<div>⏱ <b>${esc(z.t)}</b> ${esc(z.say)} <span class="mu">(${esc(z.show)})</span></div>`).join("")}<div>📝 ${esc(sc.caption)}</div><div>👉 ${esc(sc.cta)}</div><div>🎵 ${esc(sc.sound)}</div></div>`:""}<button class="cp sb" data-sc="${i}">${S.alt=="sc"+i?"⏳":sc?"🎬 Yeniden yaz":"🎬 Senaryo yaz"}</button></div>`}).join("");
+h+=`<div class="ph">Hashtag</div><div class="cd"><small>${cp((c.hashtags||[]).join(" "))}</small>${(c.hashtags||[]).map(esc).join(" ")}</div><div class="note"><b>Yayın saati denemeleri:</b> ${(c.times||[]).map(esc).join(" · ")}. Tahminidir; kendi hesap verinizle test edin.</div>`;return h+fbp("hk")},
+deck(){const d=S.deck;let h=`<h1>Yönetim Kurulu <em>Sunumu</em></h1><p class="mu">Teori ve uygulama bir arada: sade, 9 slayt, konuşmacı notlu.</p>`+genBar("deck","Sunumu Hazırla");
+if(S.busy=="deck")return h+wait();if(!d||!d.slides)return h+`<div class="empty">Henüz sunum yok. Briefi doldurup “Sunumu Hazırla”ya basın.</div>`;
+const n=d.slides.length,s=d.slides[Math.min(S.i,n-1)];
+return h+`<div class="slide ${s.type=="t"?"ts":""} c${S.i%5}${S.fs?" fsx":""}" id="sl"><div class="sn">${S.i+1} / ${n}</div>${s.type=="t"&&S.assets.logo?`<img class="slg" src="${S.assets.logo}">`:`<div class="ic">${esc(s.icon||"✨")}</div>`}<h2>${esc(s.title)}</h2>${s.subtitle?`<p class="sub">${esc(s.subtitle)}</p>`:""}${(s.bullets||[]).length?`<ul>${s.bullets.map(b=>`<li>${esc(b)}</li>`).join("")}</ul>`:""}${(s.kpis||[]).length?`<div class="kp">${s.kpis.map(k=>`<div><b>${esc(k.value)}</b><small>${esc(k.label)}</small></div>`).join("")}</div>`:""}</div>
+${S.fs?'<div class="fsc"><button data-n="-1">←</button><button data-n="1">→</button><button id="fx">✕</button></div>':""}<div class="nv"><button class="btn" data-n="-1">←</button><div class="dt">${d.slides.map((_,k)=>`<i class="${k==S.i?"on":""}"></i>`).join("")}</div><button class="btn" data-n="1">→</button><button class="btn" id="fs">⛶ Tam ekran</button></div>
+${s.note?`<div class="note"><b>Konuşmacı notu:</b> ${esc(s.note)}</div>`:""}${fbp("deck")}`},
+plan(){const p=S.plan;let h=`<h1>Aksiyon <em>Panosu</em></h1><p class="mu">Strateji sunumdan çıkıp işe dönüşür. Yapılanları işaretleyin.</p>`+genBar("plan","Planı Üret");
+if(S.busy=="plan")return h+wait();if(!p||!p.tasks)return h+`<div class="empty">Henüz plan yok.</div>`;
+const dn=p.tasks.filter((t,k)=>S.done[k]).length,pc=Math.round(dn/p.tasks.length*100);
+h+=`<b>%${pc} tamamlandı</b> <span class="mu">(${dn}/${p.tasks.length})</span><div class="pg"><i style="width:${pc}%"></i></div>`;let last="";
+p.tasks.forEach((t,k)=>{if(t.phase!=last){h+=`<div class="ph">${esc(t.phase)}</div>`;last=t.phase}
+h+=`<label class="t p${esc(t.priority)} ${S.done[k]?"d":""}"><input type="checkbox" data-d="${k}" ${S.done[k]?"checked":""}><div><div class="tt">${esc(t.title)}</div><div class="tm"><span class="bd">${esc(t.priority)}</span>👤 ${esc(t.owner)} · 🎯 ${esc(t.kpi)}</div></div></label>`});return h+fbp("plan")},
+mk(){const m=S.mk;let h=`<h1>Üretim <em>Atölyesi</em></h1><p class="mu">Hemen kullanabileceğiniz sloganlar, gönderiler, reklamlar ve e-posta.</p>`+genBar("mk","İçerikleri Üret");
+if(S.busy=="mk")return h+wait();if(!m)return h+`<div class="empty">Henüz içerik yok.</div>`;
+h+=`<div class="ph">Slogan seçenekleri</div><div class="chips">${(m.slogans||[]).map((s,k)=>`<div class="cd">${esc(s)} ${cp(s)} ${altb("mk.slogans."+k)}</div>`).join("")}</div><div class="ph">Sosyal medya gönderileri</div>`;
+(m.posts||[]).forEach((p,k)=>{const t=p.hook+"\n\n"+p.caption+"\n\n"+p.cta;h+=`<div class="cd"><small>${esc(p.format)} ${altb("mk.posts."+k)} ${cp(t)}</small><b>${esc(p.hook)}</b>\n${esc(p.caption)}\n👉 ${esc(p.cta)}</div>`});
+h+=`<div class="ph">Reklam metinleri</div>`;(m.ads||[]).forEach((a,k)=>{h+=`<div class="cd"><small>REKLAM ${altb("mk.ads."+k)} ${cp(a.headline+"\n"+a.text)}</small><b>${esc(a.headline)}</b>\n${esc(a.text)}</div>`});
+if(m.email)h+=`<div class="ph">Tanıtım e-postası</div><div class="cd"><small>${esc(m.email.subject)} ${cp(m.email.subject+"\n\n"+m.email.body)}</small>${esc(m.email.body)}</div>`;return h+fbp("mk")},
+chat(){return `<h1>Konseye <em>danışın</em></h1><p class="mu">Briefinizi bilen danışman konseyine ek sorular sorun.</p>`+S.chat.map(m=>`<div class="ch ${m.role=="user"?"u":""}"><div>${esc(m.content)}${m.role=="user"?"":` <button class="cp" data-sa="${encodeURIComponent(m.content)}">🔊</button>`}</div></div>`).join("")+(S.busy=="chat"?wait():"")+(S.err?`<div class="err">${esc(S.err)}</div>`:"")+`<div class="row"><textarea id="cq" rows="2" placeholder="Yazın ya da konuşun…">${esc(S.cqv||"")}</textarea></div><div class="row"><button class="btn" data-mic="chat">${S.mic=="chat"?"⏹ Dinliyorum…":"🎤 Konuş"}</button><button class="btn ${S.vm?"on2":""}" id="vm">🎧 Sesli sohbet: ${S.vm?"Açık":"Kapalı"}</button><button class="btn pri" id="cs" ${S.busy?"disabled":""}>Gönder</button></div>`}};
+const SEC={brief:["Başla","Bilgileri gir, paketi üret"],brand:["Marka kimliği","Slogan, renk, ses tonu, büyük fikir"],cmp:["Rakip analizi","Skor tablosu, SWOT, hamleler"],deck:["Yönetim sunumu","9 slayt, konuşmacı notlu"],plan:["Aksiyon planı","12 görev, ilerleme takibi"],mk:["İçerik paketi","Gönderi, reklam, e-posta"],hk:["Kanca atölyesi","Viral kancalar, Reels senaryoları"],req:["Talep merkezi","İsim, logo, broşür, yol haritası"],chat:["Konsey","Sorularınızı sorun"]},ORD=["brief","brand","cmp","deck","plan","mk","hk","req","chat"];
+const dn=k=>k=="req"?Object.keys(S.req||{}).length:(k=="brief"||k=="chat")?0:S[k];
+const tiles=(skip)=>ORD.map((k,j)=>k==skip?"":`<button class="st2 ${S.tab==k?"on":""}" data-t="${k}"><i>${TABS[j][1].split(" ")[0]}</i><b>${SEC[k][0]}</b><span>${SEC[k][1]}</span>${dn(k)?'<u>✓</u>':''}</button>`).join("");
+function render(){const keep=document.activeElement&&document.activeElement.id=="cq"?$("cq").value:"";
+const i=ORD.indexOf(S.tab),nx=ORD[i+1];CP=[];
+$("v").innerHTML=`<div class="crumb"><b>${TABS[i][1].split(" ")[0]} ${SEC[S.tab][0]}</b><span>${i+1} / ${ORD.length}</span></div>`+V[S.tab]()+(nx?`<div class="nxt"><button class="btn" data-t="${nx}">Sıradaki: ${SEC[nx][0]} →</button></div>`:"");
+$("sheet").innerHTML=S.menu?`<div class="bd2" data-m="0"></div><div class="sh"><div class="shh"><b>Nereye gidelim?</b><button class="btn" data-m="0">✕ Kapat</button></div><div class="sg">${tiles()}</div></div>`:"";
+if(keep&&$("cq"))$("cq").value=keep}
+async function ask(){const q=(($("cq")&&$("cq").value)||S.cqv||"").trim();S.cqv="";if(!q||S.busy)return;const sm=await claude.use("sample");if(!sm){S.err="Yapay zekâ erişimi yok.";return render()}
+S.chat.push({role:"user",content:q});S.busy="chat";S.err="";render();
+const h=S.chat.slice(-8);const f=ROLE+"\nEn fazla 120 kelime: 1 cümlelik net öneri, sonra en fazla 3 kısa madde (• ile), en sonda tek bir şimdi-yapılacak adım. Düz metin.\n\n"+ctx()+"\n\n";
+const msgs=h.map((m,k)=>k==0?{role:m.role,content:f+m.content}:m);
+try{const r=await sm(msgs,{modelTier:"complex",cache:false});{const a=(r.text||"").replace(/\*\*|^#+\s*/gm,"");S.chat.push({role:"assistant",content:a});if(S.vm)say(a)}}catch(e){S.chat.pop();S.err=em(e)}
+S.busy="";save();render()}
+document.addEventListener("click",e=>{const t=e.target;let a;
+if(t.closest("#mn")){S.menu=!S.menu;render()}else if(t.closest("[data-m]")){S.menu=false;render()}else if(a=t.closest("[data-t]")){S.tab=a.dataset.t;S.err="";S.menu=false;S.fs=false;$("main").scrollTop=0;save();render()}
+else if(a=t.closest("[data-g]"))gen(a.dataset.g);
+else if(t.closest("#all"))all();
+else if(a=t.closest("[data-n]")){const n=S.deck.slides.length;S.i=Math.max(0,Math.min(n-1,S.i+ +a.dataset.n));save();render()}
+else if(t.closest("#fs")){S.fs=true;render()}else if(t.closest("#fx")){S.fs=false;render()}
+else if(a=t.closest("[data-cp]")){const c=a.__c||0;const txt=window.__cp&&0;navigator.clipboard&&navigator.clipboard.writeText(CPT[a.dataset.cp]).then(()=>{a.textContent="Kopyalandı"}).catch(()=>{})}
+else if(a=t.closest("[data-q]")){const i=a.dataset.q.indexOf("|");S.brief[a.dataset.q.slice(0,i)]=a.dataset.q.slice(i+1);save();render()}
+else if(t.closest("[data-ex]")){Object.assign(S.brief,EX);save();render()}
+else if(a=t.closest("[data-r]"))genReq(a.dataset.r);
+else if(a=t.closest("[data-sv]"))dlSvg(+a.dataset.sv);
+else if(t.closest("#bdl"))dlBr();
+else if(a=t.closest("[data-mic]"))mic(a.dataset.mic);
+else if(t.closest("#vm")){S.vm=!S.vm;render()}
+else if(a=t.closest("[data-sa]"))say(decodeURIComponent(a.dataset.sa));
+else if(a=t.closest("[data-alt]"))alt(a.dataset.alt);
+else if(a=t.closest("[data-imp]"))improve(a.dataset.imp);
+else if(a=t.closest("[data-sc]"))scr(+a.dataset.sc);
+else if(a=t.closest("[data-rm]")){const v=a.dataset.rm;if(v=="logo")S.assets.logo=null;else if(v[0]=="p")S.assets.products.splice(+v.slice(1),1);else S.assets.docs.splice(+v.slice(1),1);save();render()}
+else if(t.closest("#cs"))ask();
+else if(t.closest("#ex"))exp()});
+let CPT=[];const _r=render;render=function(){_r();CPT=CP.slice()};
+document.addEventListener("change",e=>{const t=e.target;if(t.dataset.up){upFile(t.dataset.up,[...t.files]);t.value="";return}if(t.dataset.d!=null){S.done[t.dataset.d]=t.checked;save();render()}});
+document.addEventListener("input",e=>{const t=e.target;if(t.dataset.fb)S.fbt[t.dataset.fb]=t.value;if(t.id=="cq")S.cqv=t.value;if(t.dataset.b=="contact"){const f=document.querySelector(".br .bf");if(f)f.textContent=t.value||(S.req.brochure&&S.req.brochure.contact)||""}if(t.dataset.b){S.brief[t.dataset.b]=t.value;save();const b=document.querySelector(".pg i");if(b)b.style.width=fillPct()+"%"}});
+document.addEventListener("keydown",e=>{if(e.key=="Escape"&&(S.fs||S.menu)){S.fs=false;S.menu=false;render();return}if(S.tab=="deck"&&S.deck&&S.deck.slides&&!/INPUT|TEXTAREA/.test(e.target.tagName)){const d=e.key=="ArrowRight"?1:e.key=="ArrowLeft"?-1:0;if(d){S.i=Math.max(0,Math.min(S.deck.slides.length-1,S.i+d));render()}}});
+async function exp(){const d=await claude.use("downloads");if(!d)return;let m=`# ${S.brief.name||"Pazarlama Planı"}\n\n`;
+if(S.brand){const b=S.brand,bi=b.bigIdea||{};m+="## Marka Kiti\n\n- Öz: "+b.essence+"\n- Slogan: "+b.tagline+"\n- Manifesto: "+b.manifesto+"\n- Büyük fikir: "+bi.name+" - "+bi.idea+"\n- Renkler: "+(b.palette||[]).map(c=>c.name+" "+c.hex).join(", ")+"\n\n"}
+if(S.deck&&S.deck.slides)m+="## Yönetim Sunumu\n\n"+S.deck.slides.map((s,k)=>`### ${k+1}. ${s.title}\n${s.subtitle?s.subtitle+"\n":""}${(s.bullets||[]).map(b=>"- "+b).join("\n")}\n${(s.kpis||[]).map(x=>`- **${x.value}** ${x.label}`).join("\n")}\n*Not: ${s.note||""}*\n`).join("\n");
+if(S.plan&&S.plan.tasks)m+="\n## Aksiyon Planı\n\n"+S.plan.tasks.map((t,k)=>`- [${S.done[k]?"x":" "}] (${t.phase}) ${t.title} | ${t.owner} | ${t.kpi} | ${t.priority}`).join("\n");
+if(S.mk)m+="\n\n## İçerikler\n\nSloganlar:\n"+(S.mk.slogans||[]).map(s=>"- "+s).join("\n")+"\n\n"+(S.mk.posts||[]).map(p=>`**${p.format}** ${p.hook}\n${p.caption}\n${p.cta}\n`).join("\n")+"\n"+(S.mk.ads||[]).map(a=>`**${a.headline}**\n${a.text}\n`).join("\n")+(S.mk.email?`\n**E-posta: ${S.mk.email.subject}**\n${S.mk.email.body}`:"");
+try{await d.save({filename:"pazarlama-muduum-plani.md",data:m})}catch(e){}}
+render();
+</script>
+</body>
+</html>
